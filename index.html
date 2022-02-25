@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- This is a Simple Mini Website as in Landing Page for Squid Game, a Web series on Netflix. Data related to Netflix or Squid Game on this site is not owned by me, it is only used for project purposes -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="./photos/squid-logo.jpg" type="image/x-icon">
+    <meta name="keywords" content="squid-game, web-series, netflix, binge, world, Favourite">
+    <meta name="description" content="A Simple Landing Page for our Most Favourite Web Series Squid Game made using html and css and a bit of javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="squid.css">
+    <title>Welcome to Squid Game</title>
+</head>
+
+<body>
+    <div class="squid">
+        <div class="triangle shape"></div>
+        <div class="circle shape"></div>
+        <div class="square shape"></div>
+    </div>
+    <section class="squid_series">
+        <div class="title title-h">
+            <h1>SQUID GAME</h1>
+        </div>
+        <div class="web-series">
+            <h1><a href="https://netflix.com/squidgame">Watch Now</a></h1>
+            <div class="squid46">
+                <img src="./photos/squid-logo.jpg" alt="Squid Logo">
+            </div>
+        </div>
+        <div class="play">
+            <h2>Play and Enjoy the world's most watched <span class="play-name">Web Series</span></h2>
+            <img src="./photos/squid-poster.jpg" alt="Squid Game Poster">
+        </div>
+    </section>
+    <section id="theEnd">
+        <h1 class="gradText">The world's Most Favourite Web Series</h1>
+        <p>Squid Game is an Web Series on <span class="netflixC">Netflix <span style="font-size: 12px;">&copy;</span></span> and since the day it released, people loved it and are
+            obsessed with it.
+        </p>
+    </section>
+    <script>
+        const square = document.querySelector('.title');
+// square.classList.remove('title');
+
+// Create the observer, same as before:
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      square.classList.add('title-h');
+      return;
+    }
+
+    square.classList.remove('title-h');
+  });
+});
+observer.observe(document.querySelector('.title'));
+
+    </script>
+    <footer>
+        <div class="foot">
+            Made with <span style="color: red;">❤</span> for <span style="color: rgb(0, 255, 128);">Squid Game</span> by Tilak Jain
+        </div>
+    </footer>
+</body>
+
+</html>
+<!--        -----      Made by Tilak Jain     -----         -->
